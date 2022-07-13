@@ -1,0 +1,5 @@
+1.
+In order to receive data that is coming from an API, I would introduce a react hook. The most effective hook to fetch data is the 'useEffect'. The data fetching API can be implemented inside the 'useEffect'. So, when the application renders first time or the component mounts, the useEffect will automatically trigger the fetch API and will collect the data. Now, some considerations have to make. As, with every state update or update of the component, the useEffect triggers the fetch API, it will create an unnecessary redundency. But, this issue is solveable and the trigger point of the useEffect can be modified to the state, where the fetch API will be triggered only when the component mounts. 
+
+2.
+Using nanoid has a very little chance of generating a duplicate key. Although, the probability is almost zero, it's still a probability. Also, nanoid generates random keys every time, so react component will consider the contents new or updated every time nanoid generates a new key for the same content. 
